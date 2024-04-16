@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvsuwjrbqnfs6"]
+
+[ext_resource type="PackedScene" uid="uid://b0vchf4o5qtmh" path="res://Scenes/wall.tscn" id="1_fby3g"]
+[ext_resource type="PackedScene" uid="uid://3irxh43tbk68" path="res://Scenes/player.tscn" id="2_2bomg"]
+[ext_resource type="PackedScene" uid="uid://1ao6oja73t8x" path="res://Scenes/iron_piece.tscn" id="3_fn4wx"]
+
+[node name="Level" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = -1
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.780392, 0.517647, 0.376471, 1)
+
+[node name="Wall" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(576, 23)
+scale = Vector2(8.92969, 0.333731)
+
+[node name="Wall2" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(23, 367)
+rotation = 1.56319
+scale = Vector2(5.13466, 0.333731)
+
+[node name="Wall3" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(576, 629)
+scale = Vector2(8.92969, 0.333731)
+
+[node name="Wall4" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(1133, 365)
+rotation = 1.56319
+scale = Vector2(5.13466, 0.333731)
+
+[node name="Player" parent="." instance=ExtResource("2_2bomg")]
+position = Vector2(243, 214)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(581, 319)
+
+[node name="IronPiece" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(390, 550)
