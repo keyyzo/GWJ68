@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdfs7igeyj7fa"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerDetector.gd" id="1_4ed4f"]
+[ext_resource type="Texture2D" uid="uid://dc7dspp1vcqpp" path="res://icon.svg" id="1_vopqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxhpb"]
+size = Vector2(1076, 908)
+
+[node name="BronzePiece" type="Node2D" node_paths=PackedStringArray("PlayerDetector")]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_4ed4f")
+PlayerDetector = NodePath("PlayerDetector")
+item_move_speed = 500.0
+
+[node name="PlayerDetector" type="Area2D" parent="." groups=["Bronze", "Collectable"]]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource("RectangleShape2D_yxhpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.807843, 0.34902, 0.290196, 1)
+texture = ExtResource("1_vopqs")
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

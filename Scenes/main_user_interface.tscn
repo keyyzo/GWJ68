@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch66dc6fsqvyb"]
+
+[ext_resource type="Script" path="res://Scripts/MainUserInterface.gd" id="1_mnfru"]
+
+[node name="MainUserInterface" type="Control" node_paths=PackedStringArray("iron_label", "bronze_label", "gold_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnfru")
+iron_label = NodePath("CanvasLayer/GridContainer/IronCounter")
+bronze_label = NodePath("CanvasLayer/GridContainer/BronzeCounter")
+gold_label = NodePath("CanvasLayer/GridContainer/GoldCounter")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="IronCounter" type="Label" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "Iron Amount:"
+
+[node name="BronzeCounter" type="Label" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "Bronze Amount:"
+
+[node name="GoldCounter" type="Label" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "Gold Amount: "

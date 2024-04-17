@@ -14,6 +14,14 @@ config/name="GWJ68"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [input]
 
 move_up={
@@ -46,7 +54,7 @@ exit={
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
-2d_physics/layer_3="Iron"
+2d_physics/layer_3="Materials"
 
 [rendering]
 

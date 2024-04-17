@@ -17,6 +17,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
 		get_tree().quit()
 
+func _ready() -> void:
+	Global.Player = self
+
 func _physics_process(delta: float) -> void:
 	
 	# Movement inputs
@@ -48,3 +51,5 @@ func _on_item_detector_area_entered(area: Area2D) -> void:
 
 		if area.is_in_group("Gold"):
 			print("Gold Collectable!")
+			
+
