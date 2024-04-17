@@ -1,3 +1,4 @@
+## pick up mechanic when near item/goods. 
 class_name PlayerController
 
 extends CharacterBody2D
@@ -37,7 +38,6 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-
 func _on_item_detector_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Collectable"):
 		print("Collectable is within range!")
@@ -52,4 +52,5 @@ func _on_item_detector_area_entered(area: Area2D) -> void:
 		if area.is_in_group("Gold"):
 			print("Gold Collectable!")
 			
+
 
