@@ -1,0 +1,131 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvsuwjrbqnfs6"]
+
+[ext_resource type="PackedScene" uid="uid://b0vchf4o5qtmh" path="res://Scenes/wall.tscn" id="1_fby3g"]
+[ext_resource type="PackedScene" uid="uid://3irxh43tbk68" path="res://Scenes/player.tscn" id="2_2bomg"]
+[ext_resource type="PackedScene" uid="uid://1ao6oja73t8x" path="res://Scenes/iron_piece.tscn" id="3_fn4wx"]
+[ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="3_v1pgy"]
+[ext_resource type="PackedScene" uid="uid://ch66dc6fsqvyb" path="res://Scenes/main_user_interface.tscn" id="3_vo7ub"]
+[ext_resource type="PackedScene" uid="uid://bdfs7igeyj7fa" path="res://Scenes/bronze_piece.tscn" id="5_tk81s"]
+
+[node name="Level" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = -1
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0.780392, 0.517647, 0.376471, 1)
+
+[node name="Wall" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(576, -524)
+scale = Vector2(20.3773, 0.333731)
+
+[node name="Wall2" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(-600, 319)
+rotation = 1.56319
+scale = Vector2(13.4596, 0.333731)
+
+[node name="Wall3" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(602, 1171)
+scale = Vector2(21.3405, 0.333731)
+
+[node name="Wall4" parent="." instance=ExtResource("1_fby3g")]
+position = Vector2(1885, 319)
+rotation = 1.56319
+scale = Vector2(13.0602, 0.333731)
+
+[node name="Player" parent="." instance=ExtResource("2_2bomg")]
+position = Vector2(243, 214)
+
+[node name="MainUserInterface" parent="." instance=ExtResource("3_vo7ub")]
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("PlayerCharacter")]
+position = Vector2(243, 214)
+zoom = Vector2(0.73, 0.73)
+process_callback = 0
+position_smoothing_enabled = true
+script = ExtResource("3_v1pgy")
+PlayerCharacter = NodePath("../Player")
+
+[node name="IronPiece" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(390, 550)
+
+[node name="IronPiece2" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(647, 540)
+
+[node name="IronPiece3" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(519, 541)
+
+[node name="IronPiece4" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(469, 581)
+
+[node name="IronPiece5" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(607, 559)
+
+[node name="IronPiece6" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(455, 517)
+
+[node name="IronPiece7" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(203, 603)
+
+[node name="IronPiece8" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(23, 578)
+
+[node name="IronPiece9" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-382, 615)
+
+[node name="IronPiece10" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-375, 860)
+
+[node name="IronPiece11" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-113, 1000)
+
+[node name="IronPiece12" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-227, 1006)
+
+[node name="IronPiece13" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-263, 876)
+
+[node name="IronPiece14" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(-173, 866)
+
+[node name="IronPiece15" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(17, 850)
+
+[node name="IronPiece16" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(165, 996)
+
+[node name="IronPiece17" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(291, 844)
+
+[node name="IronPiece18" parent="." instance=ExtResource("3_fn4wx")]
+position = Vector2(385, 1004)
+
+[node name="BronzePiece" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1561, 848)
+
+[node name="BronzePiece2" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1287, 983)
+
+[node name="BronzePiece3" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1377, 810)
+
+[node name="BronzePiece4" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1606, 655)
+
+[node name="BronzePiece5" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1070, 943)
+
+[node name="BronzePiece6" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1193, 797)
+
+[node name="BronzePiece7" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1337, 828)
+
+[node name="BronzePiece8" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1438, 700)
+
+[node name="BronzePiece9" parent="." instance=ExtResource("5_tk81s")]
+position = Vector2(1285, 714)
