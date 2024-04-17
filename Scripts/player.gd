@@ -1,3 +1,4 @@
+## pick up mechanic when near item/goods. 
 class_name PlayerController
 
 extends CharacterBody2D
@@ -28,3 +29,5 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, deceleration)
 	
 	move_and_slide()
+	
+	
